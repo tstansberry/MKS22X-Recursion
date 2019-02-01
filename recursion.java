@@ -28,9 +28,14 @@ public class recursion {
   public static void mas(int n, int currentSum, ArrayList<Integer> output) {
     if (n <= 0) {
       output.add(currentSum);
-    } else {
+    }
+    else {
       mas(n - 1, currentSum + n, output);
       mas(n - 1, currentSum, output);
     }
+  }
+
+  public static int fib(int n) {
+    
   }
 }
