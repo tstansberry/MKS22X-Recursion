@@ -2,9 +2,8 @@ import java.util.*;
 
 public class recursion {
   public static void main(String args[]) {
-    System.out.println(makeAllSums(3));
-    System.out.println(makeAllSums(1));
-    System.out.println(makeAllSums(0));
+    System.out.println(fib(5));
+    System.out.println(fib(10));
   }
   //Functions to calculate square roots
   public static double sqrt(int input) {
@@ -36,6 +35,11 @@ public class recursion {
   }
 
   public static int fib(int n) {
-    
+    return fibHelper(n, 0, 0, 1);
+  }
+
+  public static int fibHelper(int n, int currentValue, int previous, int preprevious) {
+    if (n <= 0) return currentValue;
+    return fibHelper(n - 1, previous + preprevious, previous + preprevious, previous);
   }
 }
